@@ -15,7 +15,7 @@ entity Certification {
 
 entity Result {
     key id: UUID;
-    exam: String(100);
+    exam: Association to Exam;
     achiever: Association to User;
     examinedAt: Date;
     status: ResultStatus;
