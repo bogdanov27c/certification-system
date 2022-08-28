@@ -1,37 +1,37 @@
 namespace certification_system.db;
-using { managed } from '@sap/cds/common';
+using { cuid, managed } from '@sap/cds/common';
 
-entity Exam {
-    key id: UUID;
+entity Exams {
+    key ID: UUID;
     name: String(150);
     prerequisiteExamId: String(100); // self accociation
-    certificationID: Association to Certification;
+    certificationID: Association to Certifications;
 }
 
-entity Certification {
-    key id: UUID;
+entity Certifications {
+    key ID: UUID;
     name: String(150);
 }
 
-entity Result {
-    key id: UUID;
-    exam: Association to Exam;
-    achiever: Association to User;
+entity Results {
+    key ID: UUID;
+    exam: Association to Exams;
+    achiever: Association to Users;
     examinedAt: Date;
     status: ResultStatus;
 }
 
-entity Certificate {
-    id: UUID;
-    holder: Association to User;
-    certification: Association to Certification;
-    achievedAt: Timestamp;
-    valid: Boolean;
+entity Users {
+    key ID: UUID;
+    name: String(100);
 }
 
-entity User {
-    id: UUID;
-    name: String(100);
+entity Certificates {
+    key ID: UUID;
+    holder: Association to Users;
+    certification: Association to Certifications;
+    achievedAt: Timestamp;
+    valid: Boolean;
 }
 
 type ResultStatus : String enum {

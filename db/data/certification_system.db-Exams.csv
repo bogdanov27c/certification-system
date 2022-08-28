@@ -1,4 +1,4 @@
-id,name,prerequisiteExamId,certificationID
+ID,name,prerequisiteExamId,certificationID_ID
 c68d5f52-255e-11ed-861d-0242ac120002,SAP ERP Foundation Knowledge Test,dac96560-255e-11ed-861d-0242ac120002,829519c2-2561-11ed-861d-0242ac120002
 ce3ab5ce-255e-11ed-861d-0242ac120002,SAP ERP Alfa Test 1,d737fe2a-255e-11ed-861d-0242ac120002,7ea9105c-2561-11ed-861d-0242ac120002
 d345944e-255e-11ed-861d-0242ac120002,SAP ERP Beta Test 3,ce3ab5ce-255e-11ed-861d-0242ac120002,7ea9105c-2561-11ed-861d-0242ac120002
