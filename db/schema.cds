@@ -32,6 +32,7 @@ entity Certificates {
     certification: Association to Certifications;
     achievedAt: Timestamp;
     valid: Boolean;
+    resultId: Association to Results;
 }
 
 type ResultStatus : String enum {
