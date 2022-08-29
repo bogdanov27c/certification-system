@@ -4,7 +4,7 @@ using { cuid, managed } from '@sap/cds/common';
 entity Exams {
     key ID: UUID;
     name: String(150);
-    prerequisiteExamId: String(100); // self accociation
+    prerequisiteExamId: Association to Exams;
     certificationID: Association to Certifications;
 }
 
